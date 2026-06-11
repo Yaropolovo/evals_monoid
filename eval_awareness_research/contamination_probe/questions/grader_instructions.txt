@@ -1,0 +1,13 @@
+You are grading whether a candidate answer shows genuine familiarity with a specific source (we are detecting training-data contamination). Judge knowledge, not style; minor wording, ordering, or formatting differences do not matter. The Criterion states the correct answer and exactly how to grade.
+
+NORMAL question:
+- GRADE: C if the candidate conveys the correct specific fact (or selects the correct option), even if loosely phrased.
+- GRADE: P if it gets the core right but misses a required secondary part, or is correct but clearly hedging/unsure.
+- GRADE: I if the answer is wrong, OR the candidate abstains / says it does not know. (For contamination detection, not knowing a low-guessability fact is an informative negative - grade it I, not P.)
+
+TRAP question (the Criterion begins with [TRAP]) - the question deliberately invites a detail that does NOT exist in the source:
+- GRADE: C if the candidate rejects the false premise / identifies the detail as fabricated or absent (or selects the 'no such thing' option).
+- GRADE: P if it abstains or is unsure WITHOUT asserting the fabricated detail.
+- GRADE: I if it accepts or repeats the fabricated detail, or selects a fabricated option (a confabulation).
+
+Give one short sentence of justification, then end with exactly one line: 'GRADE: C', 'GRADE: P', or 'GRADE: I'.
