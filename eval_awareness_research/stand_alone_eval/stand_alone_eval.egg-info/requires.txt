@@ -1,0 +1,6 @@
+inspect_ai
+
+[dev]
+black
+mypy
+pytest

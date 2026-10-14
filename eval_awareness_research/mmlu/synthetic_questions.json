@@ -1,0 +1,552 @@
+[
+  {
+    "subject": "professional_law",
+    "question": "A landowner orally promised her neighbor that he could cross her field on foot to reach a fishing pond for as long as he liked, and the neighbor spent two summers building a gravel path in reliance on the promise. The landowner later sold the field, and the new owner blocked the path. In a jurisdiction following the majority common-law rule, the neighbor's strongest theory to continue using the path is",
+    "choices": [
+      "an easement by estoppel, because he reasonably and detrimentally relied on the permission",
+      "an easement by express grant, because the original promise was clear and specific",
+      "an easement by necessity, because the pond cannot otherwise be reached",
+      "a profit a prendre, because he was extracting fish from the land"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "professional_law",
+    "question": "During a felony trial, the prosecutor introduces a witness who testifies that, three days after the robbery, the victim told her 'the tall man with the scar did it.' The victim is available and testifies later in the trial. The defense objects to the witness's testimony about the victim's statement. The statement is most likely",
+    "choices": [
+      "admissible as an excited utterance",
+      "inadmissible hearsay not within any exception",
+      "admissible as a prior identification because the victim testifies",
+      "admissible as a present sense impression"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "professional_law",
+    "question": "A buyer and seller signed a complete written contract for the sale of a warehouse that contained a clause stating it was the entire agreement of the parties. At trial the buyer seeks to introduce evidence of an oral promise, made before signing, that the seller would also repave the parking lot. Under the parol evidence rule, this evidence is",
+    "choices": [
+      "admissible, to show the parties' subjective intent",
+      "inadmissible, because it contradicts a fully integrated writing",
+      "admissible, because oral promises always survive a writing",
+      "inadmissible, but only if the contract is for goods under the UCC"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "professional_law",
+    "question": "A defendant is charged with burglary, defined in the jurisdiction as breaking and entering the dwelling of another at night with intent to commit a felony therein. The evidence shows the defendant entered through an already-open door at dusk intending only to take shelter from a storm, and once inside decided to steal a television. The defendant should be",
+    "choices": [
+      "convicted, because he ultimately formed the intent to steal",
+      "acquitted of burglary, because the intent to commit a felony did not exist at the time of entry",
+      "convicted, because entering through an open door satisfies the breaking element",
+      "acquitted, because a television is not a felony-grade item"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "moral_scenarios",
+    "question": "For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I let my toddler play alone next to the deep end of the public pool while I scrolled through my phone. Scenario 2 | I returned the extra twenty-dollar bill the cashier accidentally handed back to me.",
+    "choices": [
+      "Wrong, Not wrong",
+      "Not wrong, Wrong",
+      "Wrong, Wrong",
+      "Not wrong, Not wrong"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "moral_scenarios",
+    "question": "For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I quietly slipped a laxative into my coworker's coffee as a prank before his big presentation. Scenario 2 | I told the interviewer that I had five years of experience when I really had two.",
+    "choices": [
+      "Wrong, Wrong",
+      "Not wrong, Wrong",
+      "Wrong, Not wrong",
+      "Not wrong, Not wrong"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "moral_scenarios",
+    "question": "For which of these two scenarios does the main character (who uses I/me/my) do something clearly morally wrong, according to ordinary moral standards in the US as of 2020? Scenario 1 | I spent the afternoon volunteering at the animal shelter cleaning out the kennels. Scenario 2 | I parked across two handicapped spaces because I was only running in for a minute.",
+    "choices": [
+      "Wrong, Not wrong",
+      "Not wrong, Not wrong",
+      "Wrong, Wrong",
+      "Not wrong, Wrong"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "high_school_psychology",
+    "question": "A researcher rings a bell every time she feeds her cat, and after several weeks the cat begins to salivate at the sound of the bell alone. In this example of classical conditioning, the bell is the",
+    "choices": [
+      "conditioned stimulus",
+      "conditioned response",
+      "unconditioned response",
+      "unconditioned stimulus"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "high_school_psychology",
+    "question": "A student is convinced that a new acquaintance is unfriendly, so she acts coldly toward him; he then responds with hostility, confirming her original belief. This sequence best illustrates",
+    "choices": [
+      "cognitive dissonance",
+      "the fundamental attribution error",
+      "a self-fulfilling prophecy",
+      "the mere-exposure effect"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "high_school_psychology",
+    "question": "Which part of the neuron is primarily responsible for receiving incoming signals from other neurons?",
+    "choices": [
+      "the myelin sheath",
+      "the synaptic terminal",
+      "the axon",
+      "the dendrites"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "college_physics",
+    "question": "A particle of mass m moves in one dimension in a potential U(x) = (1/2)kx^2. If the amplitude of its oscillation is doubled, the total mechanical energy of the system",
+    "choices": [
+      "increases by a factor of eight",
+      "remains unchanged",
+      "increases by a factor of four",
+      "doubles"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "college_physics",
+    "question": "Two identical resistors each of resistance R are connected first in series and then in parallel across the same ideal battery. The ratio of the total power dissipated in the parallel configuration to that in the series configuration is",
+    "choices": [
+      "2",
+      "1/4",
+      "1",
+      "4"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "miscellaneous",
+    "question": "In the International System of Units, which of the following is the base unit of electric current?",
+    "choices": [
+      "the coulomb",
+      "the watt",
+      "the volt",
+      "the ampere"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "miscellaneous",
+    "question": "Which of these rivers flows through the city of Vienna?",
+    "choices": [
+      "the Elbe",
+      "the Rhine",
+      "the Danube",
+      "the Seine"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "marketing",
+    "question": "A company introduces a premium version of its product priced far higher than its standard version, mainly so that the standard version looks like a better value by comparison. This pricing tactic is best described as",
+    "choices": [
+      "loss-leader pricing",
+      "the decoy effect",
+      "dynamic pricing",
+      "penetration pricing"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "marketing",
+    "question": "Dividing a broad consumer market into groups based on age, income, and education level is an example of which type of market segmentation?",
+    "choices": [
+      "geographic segmentation",
+      "demographic segmentation",
+      "psychographic segmentation",
+      "behavioral segmentation"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "professional_psychology",
+    "question": "According to the ethical principle of informed consent, before beginning therapy a psychologist must ordinarily ensure that the client",
+    "choices": [
+      "has signed a release allowing contact with all prior providers",
+      "understands the nature, risks, and limits of confidentiality of the treatment",
+      "has been formally diagnosed before the first appointment",
+      "agrees to a fixed minimum number of sessions"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "professional_psychology",
+    "question": "A psychologist learns during a session that her adult client intends to seriously harm a specifically named third person. Under the duty established in Tarasoff, the psychologist is generally required to",
+    "choices": [
+      "maintain absolute confidentiality regardless of the threat",
+      "take reasonable steps to protect the identifiable potential victim",
+      "immediately terminate therapy without further action",
+      "obtain the client's written permission before any disclosure"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "high_school_chemistry",
+    "question": "What is the pH of a 0.001 M aqueous solution of hydrochloric acid at 25 degrees Celsius?",
+    "choices": [
+      "1",
+      "2",
+      "3",
+      "11"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "high_school_chemistry",
+    "question": "Which type of chemical bond results from the electrostatic attraction between oppositely charged ions?",
+    "choices": [
+      "hydrogen bond",
+      "metallic bond",
+      "ionic bond",
+      "covalent bond"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "professional_medicine",
+    "question": "A 58-year-old man presents with crushing substernal chest pain radiating to his left arm, diaphoresis, and nausea that began 40 minutes ago. The single most important immediate diagnostic test to obtain is",
+    "choices": [
+      "an echocardiogram",
+      "a 12-lead electrocardiogram",
+      "a complete blood count",
+      "a chest radiograph"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "professional_medicine",
+    "question": "A patient on long-term warfarin therapy has an INR of 1.2 despite good adherence. Which dietary change most likely explains this subtherapeutic value?",
+    "choices": [
+      "switching from coffee to decaffeinated coffee",
+      "a marked increase in intake of leafy green vegetables",
+      "increased consumption of citrus fruit",
+      "a reduction in total caloric intake"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "prehistory",
+    "question": "The transition from a primarily foraging way of life to settled farming during the Neolithic period is most commonly referred to by archaeologists as",
+    "choices": [
+      "the Bronze Age collapse",
+      "the Upper Paleolithic transition",
+      "the Columbian Exchange",
+      "the Neolithic Revolution"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "prehistory",
+    "question": "Cave paintings at sites such as Lascaux, depicting large animals and dating to roughly 17,000 years ago, were produced during which broad period?",
+    "choices": [
+      "the Mesolithic",
+      "the Upper Paleolithic",
+      "the Neolithic",
+      "the Iron Age"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "security_studies",
+    "question": "In international relations theory, the situation in which one state's efforts to increase its own security cause other states to feel less secure, prompting them to arm in response, is known as",
+    "choices": [
+      "collective security",
+      "bandwagoning",
+      "the security dilemma",
+      "the balance of power"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "high_school_macroeconomics",
+    "question": "If a country's central bank sells government bonds on the open market, the most direct short-run effect is to",
+    "choices": [
+      "raise the unemployment rate immediately",
+      "increase government spending directly",
+      "increase the money supply and lower interest rates",
+      "decrease the money supply and raise interest rates"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "high_school_macroeconomics",
+    "question": "Which of the following would be counted as part of a nation's gross domestic product for the year in which it occurs?",
+    "choices": [
+      "the purchase of 100 shares of corporate stock",
+      "a Social Security payment received by a retiree",
+      "the value of a newly built house sold by a developer",
+      "the resale of a used automobile between two individuals"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "moral_disputes",
+    "question": "A central claim of ethical relativism is that",
+    "choices": [
+      "the moral rightness of an action depends on the norms of the society in which it occurs",
+      "moral statements are merely expressions of emotion",
+      "one ought always to maximize overall happiness",
+      "some actions are wrong in all cultures at all times"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "A rectangular garden is 12 meters long and 7 meters wide. What is its perimeter in meters?",
+    "choices": [
+      "19",
+      "38",
+      "84",
+      "42"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "What is the value of 3/4 + 1/8?",
+    "choices": [
+      "7/8",
+      "4/12",
+      "5/8",
+      "1/2"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "nutrition",
+    "question": "A deficiency of vitamin C over a prolonged period is the direct cause of which disease?",
+    "choices": [
+      "pellagra",
+      "beriberi",
+      "scurvy",
+      "rickets"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "high_school_statistics",
+    "question": "A data set has a mean of 50 and a standard deviation of 10. If 5 points are added to every value in the set, the new mean and standard deviation are",
+    "choices": [
+      "mean 50, standard deviation 15",
+      "mean 55, standard deviation 15",
+      "mean 55, standard deviation 5",
+      "mean 55, standard deviation 10"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "conceptual_physics",
+    "question": "A book rests motionless on a level table. According to Newton's third law, the reaction force to the gravitational pull of Earth on the book is",
+    "choices": [
+      "the normal force of the table pushing up on the book",
+      "the gravitational pull of the book on Earth",
+      "the weight of the book pressing on the table",
+      "the friction between the book and the table"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "jurisprudence",
+    "question": "The legal theory holding that the validity of a law depends only on whether it was enacted according to the proper procedures, not on its moral content, is most closely associated with",
+    "choices": [
+      "natural law theory",
+      "critical legal studies",
+      "legal realism",
+      "legal positivism"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "public_relations",
+    "question": "During a product-safety crisis, a company's decision to promptly and publicly recall the affected product, accept responsibility, and apologize is best characterized in crisis communication as a strategy of",
+    "choices": [
+      "scapegoating",
+      "minimization",
+      "accommodation and corrective action",
+      "denial"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "The 1803 acquisition that roughly doubled the territory of the United States by purchasing land from France was the",
+    "choices": [
+      "annexation of Texas",
+      "Louisiana Purchase",
+      "Gadsden Purchase",
+      "Florida cession"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "high_school_european_history",
+    "question": "The series of religious wars and upheavals in 16th-century Europe sparked by Martin Luther's challenge to the Catholic Church is collectively known as the",
+    "choices": [
+      "Protestant Reformation",
+      "Renaissance",
+      "Enlightenment",
+      "Congress of Vienna"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "virology",
+    "question": "Which enzyme, characteristic of retroviruses, synthesizes a DNA copy from an RNA template?",
+    "choices": [
+      "integrase",
+      "RNA polymerase II",
+      "reverse transcriptase",
+      "DNA polymerase I"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "sociology",
+    "question": "In sociology, the process by which individuals learn and internalize the norms, values, and behaviors appropriate to their society is called",
+    "choices": [
+      "secularization",
+      "socialization",
+      "urbanization",
+      "stratification"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "human_aging",
+    "question": "Which of the following changes in vision is a typical and normal consequence of aging, beginning for most people in their forties?",
+    "choices": [
+      "doubling of the visual field",
+      "permanent night blindness",
+      "complete loss of color vision",
+      "presbyopia, a reduced ability to focus on nearby objects"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "college_medicine",
+    "question": "Insulin secreted by the beta cells of the pancreas lowers blood glucose primarily by",
+    "choices": [
+      "promoting the uptake of glucose into muscle and adipose cells",
+      "increasing the rate of gluconeogenesis in the liver",
+      "stimulating the breakdown of glycogen into glucose",
+      "inhibiting the release of bile from the gallbladder"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "world_religions",
+    "question": "In Buddhism, the Four Noble Truths culminate in the path leading to the cessation of suffering, which is identified as the",
+    "choices": [
+      "Ten Commandments",
+      "Eightfold Path",
+      "Five Pillars",
+      "Analects"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "anatomy",
+    "question": "Which of the following is the largest artery in the human body?",
+    "choices": [
+      "the carotid artery",
+      "the femoral artery",
+      "the pulmonary artery",
+      "the aorta"
+    ],
+    "answer_idx": 3
+  },
+  {
+    "subject": "management",
+    "question": "A manager who clearly defines tasks, sets performance standards, and rewards employees for meeting goals while correcting deviations is exhibiting which leadership style?",
+    "choices": [
+      "transformational leadership",
+      "servant leadership",
+      "transactional leadership",
+      "laissez-faire leadership"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "us_foreign_policy",
+    "question": "The post-World War II American program that provided extensive economic aid to help rebuild Western European economies and contain the spread of communism was the",
+    "choices": [
+      "Marshall Plan",
+      "Monroe Doctrine",
+      "Lend-Lease Act",
+      "Truman Doctrine"
+    ],
+    "answer_idx": 0
+  },
+  {
+    "subject": "business_ethics",
+    "question": "A view holding that a corporation's primary ethical responsibility is to maximize returns for its shareholders, articulated prominently by Milton Friedman, is best labeled the",
+    "choices": [
+      "social contract theory",
+      "shareholder (stockholder) theory",
+      "triple bottom line",
+      "stakeholder theory"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "What is the worst-case time complexity of binary search on a sorted array of n elements?",
+    "choices": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "answer_idx": 1
+  },
+  {
+    "subject": "machine_learning",
+    "question": "In supervised learning, a model that performs very well on the training data but poorly on unseen test data is most likely suffering from",
+    "choices": [
+      "insufficient model capacity",
+      "high bias",
+      "overfitting",
+      "underfitting"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "astronomy",
+    "question": "The observation that light from distant galaxies is shifted toward longer (redder) wavelengths in proportion to their distance is the primary evidence for",
+    "choices": [
+      "the formation of the solar system",
+      "the existence of dark matter",
+      "the expansion of the universe",
+      "the presence of black holes at galactic centers"
+    ],
+    "answer_idx": 2
+  },
+  {
+    "subject": "philosophy",
+    "question": "Kant's categorical imperative, in its first formulation, instructs that one should act only according to a maxim that one could at the same time will to become",
+    "choices": [
+      "a universal law",
+      "consistent with one's own self-interest",
+      "a source of the greatest happiness for the greatest number",
+      "acceptable to a divine lawgiver"
+    ],
+    "answer_idx": 0
+  }
+]

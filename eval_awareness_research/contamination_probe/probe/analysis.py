@@ -13,14 +13,23 @@ Scoring follows the reference probe:
 Per-(model, benchmark[, source]) we report, over the KNOWLEDGE items vs the
 TRAP items separately:
   knowledge_acc    : mean score on knowledge questions (Type-II: detect knowledge)
+  mean_chance      : mean random-guess floor over the knowledge items in the
+                     slice (1/n_options for MCQ, 0 for free-form recall)
+  knowledge_lift   : knowledge_acc - mean_chance (knowledge ABOVE chance)
   trap_rejection   : fraction of traps correctly rejected (score == 1.0)
   false_acceptance : fraction of traps confabulated (score == 0.0)  [Type-I]
   familiarity      : knowledge_acc - false_acceptance
                      (high real knowledge AND low confabulation => exposure)
 
-A model that truly saw a source should score HIGH knowledge_acc with LOW
-false_acceptance. A model merely guessing tends to score low knowledge_acc
-and/or high false_acceptance, pulling familiarity toward (or below) zero.
+A model that truly saw a source should score HIGH knowledge_acc (well above
+mean_chance => positive knowledge_lift) with LOW false_acceptance. A model merely
+guessing tends to score near chance and/or high false_acceptance, pulling
+familiarity toward (or below) zero.
+
+The ``specificity`` tag (unique | secondary | headline) records how uniquely a
+fact identifies the source. ``summary_by_specificity`` lets you confirm the
+signal lives on ``unique`` facts (deep code/paper internals) rather than on
+``headline`` facts that leak into secondary sources.
 """
 
 from __future__ import annotations
@@ -43,7 +52,8 @@ def _score_to_float(v) -> float:
 def logs_to_frame(logs) -> pd.DataFrame:
     """Flatten Inspect ``EvalLog``s into one tidy row per (model, sample, epoch).
 
-    Columns: model, qid, benchmark, source, group, category, difficulty, fmt, score.
+    Columns: model, qid, benchmark, source, group, category, difficulty, fmt,
+    specificity, n_options, chance, score.
     """
     rows: list[dict] = []
     for log in logs:
@@ -54,6 +64,9 @@ def logs_to_frame(logs) -> pd.DataFrame:
         for s in log.samples:
             val = list(s.scores.values())[0].value if s.scores else None
             md = s.metadata or {}
+            n_opts = md.get("n_options")
+            # Random-guess floor: 1/n_options for MCQ; ~0 for free-form recall.
+            chance = (1.0 / n_opts) if n_opts else 0.0
             rows.append(dict(
                 model=model,
                 qid=s.id,
@@ -63,6 +76,9 @@ def logs_to_frame(logs) -> pd.DataFrame:
                 category=md.get("category"),
                 difficulty=md.get("difficulty"),
                 fmt=md.get("format"),
+                specificity=md.get("specificity"),
+                n_options=n_opts,
+                chance=chance,
                 score=_score_to_float(val),
             ))
     return pd.DataFrame(rows)
@@ -70,12 +86,16 @@ def logs_to_frame(logs) -> pd.DataFrame:
 
 def _familiarity_metrics(g: pd.DataFrame) -> pd.Series:
     """Knowledge / trap metrics for one group of rows (already filtered)."""
-    know = g.loc[g.group == "knowledge", "score"]
+    know_rows = g.loc[g.group == "knowledge"]
+    know = know_rows["score"]
     trap = g.loc[g.group == "trap", "score"]
     false_acc = (trap == 0.0).mean() if len(trap) else float("nan")
     know_acc = know.mean() if len(know) else float("nan")
+    mean_chance = know_rows["chance"].mean() if len(know_rows) else float("nan")
     return pd.Series(dict(
         knowledge_acc=know_acc,
+        mean_chance=mean_chance,
+        knowledge_lift=know_acc - mean_chance,
         trap_rejection=(trap == 1.0).mean() if len(trap) else float("nan"),
         false_acceptance=false_acc,
         familiarity=know_acc - false_acc,
@@ -108,6 +128,20 @@ def summary_by_source(df: pd.DataFrame) -> pd.DataFrame:
     return out
 
 
+def summary_by_specificity(df: pd.DataFrame) -> pd.DataFrame:
+    """Per (model, benchmark, specificity) familiarity summary.
+
+    A sanity check on the probe itself: genuine contamination signal should
+    concentrate on ``unique`` facts (deep code/paper internals). Strong scores on
+    ``headline`` facts alone are uninformative - they leak into secondary sources,
+    so a model can know them without ever seeing the original.
+    """
+    out = (df.groupby(["model", "benchmark", "specificity"], dropna=False)
+             .apply(_familiarity_metrics, include_groups=False)
+             .round(3))
+    return out
+
+
 def knowledge_acc_pivot(df: pd.DataFrame) -> pd.DataFrame:
     """Compact model x (benchmark, source) table of KNOWLEDGE accuracy only.
 
@@ -129,7 +163,11 @@ def trap_false_acceptance_pivot(df: pd.DataFrame) -> pd.DataFrame:
 
 
 def per_question_table(df: pd.DataFrame) -> pd.DataFrame:
-    """model x qid mean score - useful for eyeballing which exact facts landed."""
-    return (df.pivot_table(index=["benchmark", "source", "group", "qid"],
+    """model x qid mean score - useful for eyeballing which exact facts landed.
+
+    Indexed by benchmark/source/group/specificity/fmt/qid so you can see at a
+    glance which *kind* of fact each model knew (or which traps it fell for).
+    """
+    return (df.pivot_table(index=["benchmark", "source", "group", "specificity", "fmt", "qid"],
                            columns="model", values="score", aggfunc="mean")
               .round(2))

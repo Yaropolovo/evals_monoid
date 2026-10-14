@@ -1,0 +1,30 @@
+Metadata-Version: 2.4
+Name: stand_alone_eval
+Version: 0.1.0
+Summary: Standalone evaluation for inspect_ai
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: inspect_ai
+Provides-Extra: dev
+Requires-Dist: black; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+
+# Standalone Evaluation for Inspect AI
+
+This package contains standalone evaluation tasks for use with the Inspect AI framework.
+
+## Installation
+
+```bash
+# Install in development mode
+pip install -e .
+```
+
+## Usage
+
+```bash
+# Run the oversight subversion evaluation
+inspect eval oversight_subversion
+``` 

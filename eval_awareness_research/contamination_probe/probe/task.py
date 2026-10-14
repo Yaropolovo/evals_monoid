@@ -5,7 +5,7 @@ a candidate solver (system message + generate) feeding a lenient
 ``model_graded_qa`` scorer that grades each answer against its per-question
 criterion (C / P / I -> 1.0 / 0.5 / 0.0).
 
-The default task ``contamination_probe`` runs all three benchmarks in one eval
+The default task ``contamination_probe`` runs all four benchmarks in one eval
 (separable later via the ``benchmark`` metadata tag). Per-benchmark wrapper
 tasks are also provided for running one benchmark in isolation.
 
@@ -23,6 +23,7 @@ from inspect_ai.solver import generate, system_message
 from questions.prompts import CANDIDATE_SYSTEM, GRADER_INSTRUCTIONS
 
 from .dataset import build_samples
+from .solver import shuffle_mcq
 
 # Strong, lenient judge (same family as the reference probe). Override per-call
 # via the task argument if you want a different grader.
@@ -36,7 +37,9 @@ DEFAULT_EPOCHS = 20
 def _make_task(benchmark: str | None, grader_model: str, epochs: int) -> Task:
     return Task(
         dataset=build_samples(benchmark),
-        solver=[system_message(CANDIDATE_SYSTEM), generate()],
+        # shuffle_mcq renders MCQ options in a per-epoch random order (debiases
+        # answer position); it is a no-op for free-form questions.
+        solver=[system_message(CANDIDATE_SYSTEM), shuffle_mcq(), generate()],
         scorer=model_graded_qa(
             instructions=GRADER_INSTRUCTIONS,
             partial_credit=True,
@@ -51,7 +54,7 @@ def contamination_probe(
     grader_model: str = DEFAULT_GRADER_MODEL,
     epochs: int = DEFAULT_EPOCHS,
 ) -> Task:
-    """Combined probe over Cybench + Alignment Faking + IPI Arena.
+    """Combined probe over Cybench + Alignment Faking + IPI Arena + In-Context Scheming.
 
     Results stay separable by the ``benchmark`` and ``source`` metadata tags.
     """
@@ -83,3 +86,18 @@ def ipi_arena_probe(
 ) -> Task:
     """IPI Arena-only contamination probe."""
     return _make_task("ipi_arena", grader_model, epochs)
+
+
+@task
+def incontext_scheming_probe(
+    grader_model: str = DEFAULT_GRADER_MODEL,
+    epochs: int = DEFAULT_EPOCHS,
+) -> Task:
+    """In-Context Scheming-only contamination probe.
+
+    The eval code (``stand_alone_eval/`` Oversight Subversion) is non-public, so
+    here ``source="code"`` facts are a NEGATIVE control (expect ~chance) while
+    ``source="report"`` facts are a POSITIVE control (the Dec-2024 paper is widely
+    known). Read the code-vs-report split in ``summary_by_source``.
+    """
+    return _make_task("incontext_scheming", grader_model, epochs)

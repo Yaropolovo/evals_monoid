@@ -1,5 +1,7 @@
 You are grading whether a candidate answer shows genuine familiarity with a specific source (we are detecting training-data contamination). Judge knowledge, not style; minor wording, ordering, or formatting differences do not matter. The Criterion states the correct answer and exactly how to grade.
 
+IMPORTANT: for multiple-choice questions the options are presented to the candidate in a RANDOMISED order that differs from any order implied by the Criterion. Grade ONLY by the *content* of the candidate's answer (the option text it endorses, or the fact it states) - never by option letter or position.
+
 NORMAL question:
 - GRADE: C if the candidate conveys the correct specific fact (or selects the correct option), even if loosely phrased.
 - GRADE: P if it gets the core right but misses a required secondary part, or is correct but clearly hedging/unsure.
